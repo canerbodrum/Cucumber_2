@@ -1,0 +1,117 @@
+Maven
+1- Yeni projeye tıklattım-> Proje Tipi olarak MAVEN
+   seçildi.satandart sonlandırıldı.
+
+2- Klasör yapısını inceledik:
+   main -> Developer ın source kodları
+   test -> Testerın kodları
+
+3- Mavenın verdiği düzenli yapının kendi tarafımızda ,
+   bizde kendi düzenli klasör yapımızı oluşturacağız.
+   Klasörler
+
+   FeatureFiles   -> Senaryolarımızın olduğu klasör
+   StepDefinitions-> Senaryoların çalışan adımları - metodları burada olacak
+   Pages          -> Page Object Modell sayfalarımız POM (@FindBy)
+   Utilities      -> Driver ve diğer tekrar kullanılacak metodlarımız
+   Runners        -> Çalıştırıcılar
+
+#Keywords#
+Each line that isn’t a blank line has to start with a Gherkin keyword, followed by any text you like.
+The only exceptions are the free-form descriptions placed underneath
+Example/Scenario, Background, Scenario Outline and Rule lines.
+
+The primary keywords are:
+
+Feature
+Rule (as of Gherkin 6)
+Example (or Scenario)
+Given, When, Then, And, But for steps (or *)
+Background
+Scenario Outline (or Scenario Template)
+Examples (or Scenarios)
+There are a few secondary keywords as well:
+
+""" (Doc Strings)
+| (Data Tables)
+@ (Tags)
+# (Comments)
+
+#When#
+When steps are used to describe an event, or an action. This can be a person interacting with the system,
+or it can be an event triggered by another system.
+
+It’s strongly recommended you only have a single When step per Scenario. If you feel compelled to add more,
+it’s usually a sign that you should split the scenario up into multiple scenarios.
+
+Examples:
+
+Guess a word
+Invite a friend
+Withdraw money
+
+#Then#
+Then steps are used to describe an expected outcome, or result.
+
+The step definition of a Then step should use an assertion to compare the actual outcome
+(what the system actually does) to the expected outcome (what the step says the system is supposed to do).
+
+An outcome should be on an observable output. That is, something that comes out of the system
+(report, user interface, message), and not a behaviour deeply buried inside the system (like a record in a database).
+
+Examples:
+
+See that the guessed word was wrong
+Receive an invitation
+Card should be swallowed
+While it might be tempting to implement Then steps to look in the database - resist that temptation!
+
+You should only verify an outcome that is observable for the user (or external system),
+and changes to a database are usually not.
+
+#And, But#
+If you have successive Given’s, When’s, or Then’s, you could write:
+
+Example: Multiple Givens
+  Given one thing
+  Given another thing
+  Given yet another thing
+  When I open my eyes
+  Then I should see something
+  Then I shouldn't see something else
+Or, you could make the example more fluidly structured by replacing the successive Given’s,
+When’s, or Then’s with And’s and But’s:
+
+Example: Multiple Givens
+  Given one thing
+  And another thing
+  And yet another thing
+  When I open my eyes
+  Then I should see something
+  But I shouldn't see something else
+
+#*#
+Gherkin also supports using an asterisk (*) in place of any of the normal step keywords.
+This can be helpful when you have some steps that are effectively a list of things, so you can express it
+more like bullet points where otherwise the natural language of And etc might not read so elegantly.
+
+For example:
+
+Scenario: All done
+  Given I am out shopping
+  And I have eggs
+  And I have milk
+  And I have butter
+  When I check my list
+  Then I don't need anything
+Could be expressed as:
+
+Scenario: All done
+  Given I am out shopping
+  * I have eggs
+  * I have milk
+  * I have butter
+  When I check my list
+  Then I don't need anything
+
+
