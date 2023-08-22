@@ -3,12 +3,7 @@ package StepDefinitions;
 import Utilities.ExcelUtility;
 import Utilities.GWD;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-
-import java.io.IOException;
 
 public class Hooks {
 

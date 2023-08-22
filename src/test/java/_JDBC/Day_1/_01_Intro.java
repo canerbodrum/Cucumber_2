@@ -1,6 +1,6 @@
 package _JDBC.Day_1;
 
-import com.mysql.cj.x.protobuf.MysqlxCursor;
+
 import org.testng.annotations.Test;
 
 import java.sql.*;
