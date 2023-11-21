@@ -14,34 +14,39 @@ import java.time.Duration;
 public class Parent {
     WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
 
-    public void sendKeysFunction(WebElement element, String yazi){
+    public void sendKeysFunction(WebElement element, String yazi) {
         waitUntilVisible(element);
         scrollToElement(element);
         element.clear();
         element.sendKeys(yazi);
 
     }
-    public void clickFunction(WebElement element){
+
+    public void clickFunction(WebElement element) {
         waitUntilClickable(element);
         scrollToElement(element);
         element.click();
 
     }
-    public void verifyContainsTextFunction(WebElement element, String value){
+
+    public void verifyContainsTextFunction(WebElement element, String value) {
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
-        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"no such TEXT");
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()), "no such TEXT");
         new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).perform();
         // açık dialog kutusu varsa kapansın
     }
-    public void scrollToElement(WebElement element){
+
+    public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
 
     }
-    public void waitUntilVisible(WebElement element){
+
+    public void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    public void waitUntilClickable(WebElement element){
+
+    public void waitUntilClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 

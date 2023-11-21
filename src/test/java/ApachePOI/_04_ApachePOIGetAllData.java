@@ -14,7 +14,7 @@ public class _04_ApachePOIGetAllData {
 
         Workbook workbook = WorkbookFactory.create(inputStream);
 
-        Sheet sheet = workbook.getSheetAt(0);
+        Sheet sheet = workbook.getSheetAt(1);
 
         int rowCount = sheet.getPhysicalNumberOfRows();
 

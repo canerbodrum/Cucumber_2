@@ -37,8 +37,8 @@ public class _02_CountrySteps {
     @When("create a country name as {string} code as {string}")
     public void createACountryNameAsCodeAs(String names, String codes) {
         dc.clickFunction(dc.addButton);
-        dc.sendKeysFunction(dc.nameInput, "names");
-        dc.sendKeysFunction(dc.codeInput, "codes");
+        dc.sendKeysFunction(dc.nameInput, names);
+        dc.sendKeysFunction(dc.codeInput, codes);
         dc.clickFunction(dc.saveButton);
     }
 }

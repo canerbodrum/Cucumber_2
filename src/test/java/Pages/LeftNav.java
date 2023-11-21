@@ -12,10 +12,10 @@ public class LeftNav extends Parent {
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement setup;
-
     @FindBy(xpath = "//span[text()='Parameters']")
     public WebElement parameters;
-
+    @FindBy(xpath = "//span[text()='States']")
+    public WebElement states;
     @FindBy(xpath = "(//span[text()='Countries'])[1]")
     public WebElement countries;
 
@@ -58,6 +58,8 @@ public class LeftNav extends Parent {
                 return setupExams;
             case "entranceExamsTwo":
                 return entranceExamsTwo;
+            case "states":
+                return states;
         }
         return null;
     }

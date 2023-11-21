@@ -11,5 +11,5 @@ Feature: Country Multi Scenario
       Then Success message should be displayed
 
       Scenario: Create a country 2
-        When create a country name as "il332" code as "422"
+        When create a country name as "i344a" code as "422"
         Then Success message should be displayed

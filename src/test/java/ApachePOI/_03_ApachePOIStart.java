@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class _03_ApachePOIStart {
     public static void main(String[] args) throws IOException {
-        //dosyanın yolunu değişkene atalım
+        //dosyanın yolunu değişkene atalımz
     String path = "src/test/java/ApachePOI/resource/ApacheExcel2.xlsx";
 
         // JavaDosya okuma işlemcisine dosyanın yolunu veriyoruz:

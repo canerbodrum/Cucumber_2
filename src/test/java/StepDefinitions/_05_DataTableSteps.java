@@ -50,6 +50,7 @@ public class _05_DataTableSteps {
 
     @And("User delete item from Dialog Content")
     public void userDeleteItemFromDialogContent(DataTable dt) {
+
         List<String> strButtons = dt.asList(String.class);
 
         for (String strDeleteText : strButtons) {

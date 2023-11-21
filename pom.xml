@@ -101,6 +101,7 @@
 
 
     </dependencies>
+    <!--  maven test çalıştırılınca bölümün setlenmesi-->
     <build>
         <plugins>
             <plugin>
@@ -115,13 +116,13 @@
 
                     <includes>
                         <!-- for  run class or classes  /:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                        <include>/_04_TestRunnerSmoke.java</include>
+                        <include>/testng.xml</include>
                     </includes>
 
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
+<!--  maven test çalıştırılınca bölümün setlenmesi-->
 
 </project>

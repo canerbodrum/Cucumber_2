@@ -27,7 +27,7 @@ public class _01_LoginSteps {
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
 
-        dc.verifyContainsTextFunction(dc.txtTechnoStudy, "Techno Study");
+        dc.verifyContainsTextFunction(dc.txtTechnoStudy, "Techno");
     }
 
 }

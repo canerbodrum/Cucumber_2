@@ -16,14 +16,14 @@ Feature: DataTable Functionality
         | addButton      |
 
       And User sending the keys in Dialog Content
-        | nameInput | Etk4e12   |
+        | nameInput | cnrasd   |
         | codeInput | e4532     |
 
       And Click on the element in DialogContent
         | saveButton |
 
       And User delete item from Dialog Content
-        |Etk4e12|
+        |cnrasd|
 
       Then Success message should be displayed
 
@@ -40,7 +40,7 @@ Feature: DataTable Functionality
       | addButton |
 
     And User sending the keys in Dialog Content
-      | nameInput | Etk4e12 |
+      | nameInput | 123012 |
 
     And Click on the element in DialogContent
       | saveButton |
@@ -48,7 +48,7 @@ Feature: DataTable Functionality
     Then Success message should be displayed
 
     And User delete item from Dialog Content
-      |Etk4e12|
+      |123012|
 
     Then Success message should be displayed
   @Regression
@@ -61,7 +61,7 @@ Feature: DataTable Functionality
         | addButton |
 
       And User sending the keys in Dialog Content
-        | nameInput            | Etk412d |
+        | nameInput            | 12221 |
         | codeInput            | 2etfd32 |
         | integrationCodeInput |  13243  |
         | priorityInput        |   312   |
@@ -73,6 +73,6 @@ Feature: DataTable Functionality
       Then Success message should be displayed
 
       And User delete item from Dialog Content
-        | Etk412d |
+        | 12221 |
 
       Then Success message should be displayed
