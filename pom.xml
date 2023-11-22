@@ -20,8 +20,9 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.11.0</version>
+            <version>4.15.0</version>
         </dependency>
+
 
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -116,7 +117,7 @@
 
                     <includes>
                         <!-- for  run class or classes  /:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                        <include>/testng.xml</include>
+                        <include>**Runners._04_TestRunnerSmoke</include>
                     </includes>
 
                 </configuration>
