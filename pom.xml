@@ -117,7 +117,7 @@
 
                     <includes>
                         <!-- for  run class or classes  /:bulunduğu lokasyonu bütün klasörlere göre bulabiliyor   -->
-                        <include>**Runners._04_TestRunnerSmoke</include>
+                        <include>**/_04_TestRunnerSmoke.java</include>
                     </includes>
 
                 </configuration>
